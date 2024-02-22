@@ -8,7 +8,8 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "db:migrate:dev": "pnpm --filter @apps/api run prisma:migration:create"
+    "db:migrate:dev": "pnpm --filter @apps/api run prisma:migration:create",
+    "db:seed": "pnpm --filter @apps/api run prisma:db:seed"
   },
   "keywords": [],
   "author": "",

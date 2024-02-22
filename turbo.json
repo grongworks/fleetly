@@ -9,9 +9,6 @@
       "build": {
         "dependsOn": ["type-check"],
         "outputs": ["dist/**"]
-      },
-      "prisma:db:seed": {
-        "cache": false
       }
     }
   }

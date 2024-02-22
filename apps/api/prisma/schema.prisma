@@ -18,3 +18,8 @@ model Car {
   id    String @id @default(cuid())
   model String
 }
+
+model Station {
+  id String @id @default(cuid())
+  name String
+}
