@@ -1,7 +1,12 @@
+import * as dotenv from "dotenv"
+dotenv.config()
+
 import cors from 'cors'
 import express from 'express'
 
 import { Workspace } from '@common/types'
+import prisma from './helpers/prisma'
+import carController from "./controller/cars"
 
 const app = express()
 const port = 5000
@@ -16,5 +21,7 @@ app.get('/workspaces', (_, response) => {
   ]
   response.json({ data: workspaces })
 })
+
+app.use("/cars-new", carController())
 
 app.listen(port, () => console.log(`Listening on http://localhost:${port}`))
